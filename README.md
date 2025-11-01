@@ -1,6 +1,3 @@
-Got it! Here's the section that covers just setting up the **virtual environment** and installing dependencies, formatted in **Markdown**:
-
-````markdown
 ## Setting Up the Virtual Environment (Windows)
 
 ### 1. Create a Virtual Environment
@@ -36,14 +33,3 @@ pip install -r requirements.txt
 This will install all the necessary Python packages listed in `requirements.txt` to your virtual environment.
 
 ````
-
-### How to use:
-1. Copy this content into the appropriate section of your `README.md`.
-2. Commit and push the changes to GitHub:
-   ```bash
-   git add README.md
-   git commit -m "Add virtual environment setup instructions"
-   git push origin master  # or main, depending on your default branch
-````
-
-This section focuses solely on setting up the **virtual environment** and installing dependencies. Let me know if this is good to go!
