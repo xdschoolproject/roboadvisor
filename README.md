@@ -33,6 +33,10 @@ pip install -r requirements.txt
 
 This will install all the necessary Python packages listed in `requirements.txt` to your virtual environment.
 
+4. Verify the Installed Dependencies
+
+To ensure that all dependencies were successfully installed, run the following command:
+
 <br>
 
 ## Running the Django Web Application
