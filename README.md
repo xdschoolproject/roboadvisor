@@ -12,6 +12,20 @@ Then, create a new virtual environment in your project directory:
 ```bash
 python -m venv venv
 ```
+After entering the command a venv folder should be created inside the project folder, like this:
+
+```
+project_folder/
+│
+├── venv/                 # Virtual environment folder Should be Here
+│
+├── roboadvisor/          # This is the main project folder (Django, Streamlit, database are here)
+│
+├── db.sqlite3            # This is not the databse file. This file has bugs. 
+│
+└── requirements.txt      # File for listing project dependencies
+```
+This structure places the `venv` (virtual environment) in the root of the project folder, alongside your application folder (`roboadvisor`), the database file (`db.sqlite3`), and the `requirements.txt` file.
 
 ### 2. Activate the Virtual Environment
 
