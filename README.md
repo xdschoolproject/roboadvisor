@@ -51,11 +51,14 @@ This will install all the necessary Python packages listed in `requirements.txt`
 
 To ensure that all dependencies were successfully installed, run the following command:
 
+```bash
+pip freeze
+```
+
 <br>
 
 ## Running the Django Web Application
-   **Note:** This will only run code written in **django** and will not include **streamlit** code. You need to run both servers in order to run both applications together.
-   
+
 ### 1. Activate the Virtual Environment
    Open **Command Prompt** or **PowerShell**, and navigate to your project directory. Then, activate the virtual environment:
    ```bash
@@ -81,3 +84,5 @@ python manage.py runserver
 ```
 
 By default, it will be accessible at `http://127.0.0.1:8000/`.
+
+**Note:** This will only run code written in **django** and will not include **streamlit** code. You need to run both servers in order to run both applications together.
