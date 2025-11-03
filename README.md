@@ -17,13 +17,22 @@ After entering the command a venv folder should be created inside the project fo
 ```
 project_folder/
 │
-├── venv/                 # Virtual environment folder Should be Here
+├── venv/                         # Virtual environment folder Should be Here
 │
-├── roboadvisor/          # This is the main project folder (Django, Streamlit, database are here)
+├── roboadvisor/                  # This is the main project folder (Django, Streamlit, database are here)
 │
-├── db.sqlite3            # This is not the databse file. This file has bugs. 
+├── db.sqlite3                    # This is not the databse file. This file has bugs. 
 │
-└── requirements.txt      # File for listing project dependencies
+└── requirements.txt              # File for listing project dependencies
+│
+└──home_page/                     
+│
+└── stock_analysis_back_end/  
+│
+└── stock_analysis_front_end/ 
+│
+└── docs/                   
+
 ```
 This structure places the `venv` (virtual environment) in the root of the project folder, alongside your application folder (`roboadvisor`), the database file (`db.sqlite3`), and the `requirements.txt` file.
 
