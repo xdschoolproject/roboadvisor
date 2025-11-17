@@ -1,8 +1,22 @@
 ## Setting Up the Virtual Environment (Windows)
    **Note:** This step is needed after cloning the repository because the virtual environment contains all the necessary dependencies that the project requires.
-   
-### 1. Create a Virtual Environment
-   Open **Command Prompt** or **PowerShell**, and navigate to your cloned project folder:
+
+### 1. Download python 3.13.9
+  Open your browser and download python 3.13.9. Enter this in the URL
+
+   ```bash
+  https://www.python.org/ftp/python/3.13.9/python-3.13.9-amd64.exe 
+````
+
+### 2. Clone the master branch in github
+  Open **terminal** in **vscode** and Enter the command:
+   ```bash
+  git clone -b master https://github.com/xdschoolproject/roboadvisor.git
+````
+  After cloning you should see roboadvisor folder.
+  
+### 3. Create a Virtual Environment
+   In the **terminal** in **vscode**, navigate to your cloned roboadvisor folder:
    ```bash
    cd path\to\your\cloned\repo\test
 ````
@@ -36,7 +50,7 @@ project_folder/
 ```
 This structure places the `venv` (virtual environment) in the root of the project folder, alongside your application folder (`roboadvisor`), the database file (`db.sqlite3`), and the `requirements.txt` file.
 
-### 2. Activate the Virtual Environment
+### 4. Activate the Virtual Environment
 
 Activate the environment by running the following command:
 
@@ -46,7 +60,7 @@ venv\Scripts\Activate.ps1
 
 After activation, you should see `(venv)` in the command prompt, indicating that the virtual environment is active.
 
-### 3. Install Dependencies
+### 5. Install Dependencies
 
 Install all the required dependencies from the `requirements.txt` file by running:
 
@@ -56,7 +70,7 @@ pip install -r requirements.txt
 
 This will install all the necessary Python packages listed in `requirements.txt` to your virtual environment.
 
-### 4. Verify the Installed Dependencies
+### 6. Verify the Installed Dependencies
 
 To ensure that all dependencies were successfully installed, run the following command:
 
