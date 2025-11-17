@@ -10,7 +10,7 @@
 Then, create a new virtual environment in your project directory:
 
 ```bash
-python -m venv venv
+py -3.13 -m venv venv
 ```
 After entering the command a venv folder should be created inside the project folder, like this:
 
@@ -41,7 +41,7 @@ This structure places the `venv` (virtual environment) in the root of the projec
 Activate the environment by running the following command:
 
 ```bash
-venv\Scripts\activate
+venv\Scripts\Activate.ps1
 ```
 
 After activation, you should see `(venv)` in the command prompt, indicating that the virtual environment is active.
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 This will install all the necessary Python packages listed in `requirements.txt` to your virtual environment.
 
-4. Verify the Installed Dependencies
+### 4. Verify the Installed Dependencies
 
 To ensure that all dependencies were successfully installed, run the following command:
 
@@ -68,13 +68,15 @@ pip freeze
 
 ## Running the Django Web Application
 
-### 1. Activate the Virtual Environment
-   Open **Command Prompt** or **PowerShell**, and navigate to your project directory. Then, activate the virtual environment:
+### 1. Activate the Virtual Environment ()
+   Open **terminal** in **vscode**, and navigate to your project folder:
    ```bash
-   cd path\to\your\cloned\repo\test
-   venv\Scripts\activate
+   cd path\to\your\cloned\repo\
 ````
-
+   Then activate the venv:
+   ```bash
+   venv\Scripts\Activate.ps1
+````
 ### 2. Apply Database Migrations
 
 Run the following command to apply database migrations:
@@ -95,3 +97,58 @@ python manage.py runserver
 By default, it will be accessible at `http://127.0.0.1:8000/`.
 
 **Note:** This will only run code written in **django** and will not include **streamlit** code. You need to run both servers in order to run both applications together.
+
+<br>
+
+## Running the Streamlit and Django Web Application Together
+### 1. Activate the Virtual Environment
+   Open **terminal** in **vscode**, and navigate to your project folder:
+   ```bash
+   cd path\to\your\cloned\repo\test
+````
+   Then activate the venv:
+   ```bash
+   venv\Scripts\Activate.ps1
+````
+### 2. Apply Database Migrations
+
+Run the following command to apply database migrations:
+
+```bash
+python manage.py migrate
+```
+**Note:** We need to run both **django** and **streamlit** server in the terminal. You need to run both servers in order to run both web applications together.
+
+### 3. Run the Streamlit Server First
+
+Navigate to the stock_analysis_front_end folder:
+```bash
+cd path\to\your\cloned\repo\roboadvisor\stock_analysis_front_end\ 
+```
+Start the server with: 
+```bash
+streamlit run stock_analysis_app.py 
+```
+This should open the stock analysis page in your browser. You can close the browser after openning but don't exit the server in the terminal.
+
+### 4. Open a new tab in the terminal in vscode and activate the Virtual Environment in the new tab
+   Open a new tab in the **terminal** in **vscode**, and navigate to your project folder (in vscode terminal click the "+" button):
+   ```bash
+   cd path\to\your\cloned\repo\test
+````
+   Then activate the venv:
+   ```bash
+   venv\Scripts\Activate.ps1
+````
+After activation, you should have two terminal tabs in vscode. The `(venv)` in the command prompt, indicates that the virtual environment is active.
+
+### 5. Run the Django Development Server Second
+Navigate to the main roboadvisor folder (make sure you are in the folder that has manage.py file):
+```bash
+cd path\to\your\cloned\repo\
+```
+Start the server with:
+```bash
+python manage.py runserver
+```
+By default, it will be accessible at `http://127.0.0.1:8000/`. Open the browser and enter `http://127.0.0.1:8000/` in the URL
